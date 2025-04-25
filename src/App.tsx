@@ -53,7 +53,7 @@ function App() {
     <div className="relative h-full w-full">
       <MapContainer
         className="z-0"
-        style={{ height: window.innerHeight }}
+        style={{ height: "100vh" }}
         center={[12.8797, 121.774]}
         zoom={6}
         scrollWheelZoom={false}
