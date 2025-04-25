@@ -1,0 +1,11 @@
+services:
+  phil-eq-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: phil-eq-app
+    restart: unless-stopped
+    environment:
+      - VITE_EQ_PHIVOLCS_API=${VITE_EQ_PHIVOLCS_API}
+    ports:
+      - "4545:80" # set "127.0.0.1:4545" to expose only to host
