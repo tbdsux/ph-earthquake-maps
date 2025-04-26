@@ -12,7 +12,7 @@ function App() {
   const { data, isPending } = useQuery({
     queryKey: ["earthquakes"],
     queryFn: async () => {
-      const res = await fetch(import.meta.env.VITE_EQ_PHIVOLCS_API + "/latest");
+      const res = await fetch("/api/latest");
       const data = (await res.json()) as EQData;
 
       return {
