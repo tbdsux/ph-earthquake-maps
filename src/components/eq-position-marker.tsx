@@ -30,7 +30,16 @@ export default function EQPositionMarker(props: {
   return (
     <Marker position={calcPosition}>
       <Popup>
-        <h3 className="text-sm font-semibold">{props.data["Mag"]} Magnitude</h3>
+        <h3 className="text-sm font-semibold">
+          <a
+            href={props.data["Link"]}
+            target="_blank"
+            rel="noreferer noopener"
+            className="hover:underline"
+          >
+            {props.data["Mag"]} Magnitude
+          </a>
+        </h3>
         <div className="flex flex-col space-y-0">
           <p className="text-xs text-gray-500">
             {props.data["Location"]}
